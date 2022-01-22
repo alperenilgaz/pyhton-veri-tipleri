@@ -84,15 +84,23 @@ konsol: o harfini bastırır.
        8.örnek :Baştan sona -1 atlayarak stringi al. (String'i ters çevirme)
         
        a="tehlikeli oyunlar"   
-       a[::-1]
+       a[::-1] ----> ** kelimeyi tersten yazma kodu **
        konsol : 'ralnuyo ilekilhet'  yazısını gösterir.
        
  ## String Özellikleri
  ----------------------
 Bir string'in uzunluğunu nasıl buluruz ? Bunun için Python'da len() fonksiyonu bulunmaktadır.
-Peki, Pythonda stringler toplanabiliyor mu ? Python'da bunu yapmak pythonda mümkündür.    
+örnek: 
+string="nazım hikmet"
+len (string) ----> **boşluğuda bir karakter sayar**
+konsol : 12 sayısını bize verir.
 
-1.örnek: Stringleri toplayalım yani birbirine ekleyelim.
+Peki, Pythonda stringler toplanabiliyor mu ? Python'da bunu yapmak pythonda mümkündür.    
+1.örnek : 
+"python"*3
+konsol : bize 'pythonpythonpython' yazısını verir.
+
+2.örnek: Stringleri toplayalım yani birbirine ekleyelim.
 a="necip "
 b="fazil "
 c="kisakürek "
@@ -100,7 +108,7 @@ a+b+c
 konsol : necip fazil kisakürek yazisini gösterir
         
         
-2.örnek :         
+3.örnek :         
 a="oğuz atay"
 a+="tutunamayanlar"
 a

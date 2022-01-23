@@ -179,10 +179,15 @@ konsol = 5.14 cevabını veirir.
 print("alperen ılgaz")
 konsol bize alperen ılgaz yazısını aynen gösterir.
 
- Peki aynı satırda birkaç değer bastırmak istersek ne yapıyoruz? Bunun için değerlerimizin arasına , karakterini atıyoruz.
+Peki aynı satırda birkaç değer bastırmak istersek ne yapıyoruz? Bunun için değerlerimizin arasına , karakterini atıyoruz.
 
-
-
+örnekler :
+----------
+1)print("alperen",5,12,39)
+  konsol  bize alperen 5 12 39 yazısını gösterir(eğere hepsi tırnak içinde olsaydı alperen ,5,12,39 şeklinde bastırırdı.)
+  
+ 2)print("necip","fazil","kısakürek")         
+   konsol= necip fazil kısakürek yazısını gösterir. 
 
 
 

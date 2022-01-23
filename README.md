@@ -384,7 +384,7 @@ Bir listeyi birbirine toplama işlemini stringlerdeki gibi yapabiliriz.
    [10, 2, 3, 4, 'alperen']
    
   ** Şöyle bir kullanım da mümkündür.
-   liste[:2] = [40,50] // 3.elemandan sonra 40,50 elamanı yok ve geri kalan elemanları yaz//
+   liste[:2] = [40,50] // 3.elemandan sonra 40,50 elamanı koy ve geri kalan elemanları yaz//
    liste
    konsol : [40, 50, 3, 4, 'alperen']
    
@@ -402,7 +402,7 @@ Bir listeyi birbirine toplama işlemini stringlerdeki gibi yapabiliriz.
    
    !!!Şimdi de isterseniz temel bazı liste metodlarına bakalım. Listeler, diğer programlama dillerindeki arraylere göre oldukça esnektir. Belli bir boyutları yoktur ve ekleme, çıkarma yapmak oldukça kolaydır.
    
-## append metodu
+## append(ekleme) metodu
 ----------------
 append metodu, verdiğimiz değeri listeye eklememizi sağlar
 örneğin;
@@ -421,35 +421,89 @@ konsol = [3, 4, 5, 6, 7, 'alperen']
 Bu metod, içine değer vermezsek listenin son indeksindeki elemanı, değer verirsek verdiğimiz değere karşılık gelen      indeksteki elemanı listeden atar ve attığı elemanı ekrana basar.
 örneğin;
 liste = [1,2,3,4,5] 
-liste.pop() //eğer pop'un içine değer verilmemişse sondaki elemanı atar ve listeyi son haliyle bastırır.//
+liste.pop()//eğer pop'un içine değer verilmemişse sondaki elemanı atar ve listeyi son haliyle bastırır.//
+liste
 konsol=1,2,3,4 
 
+##sort(çeşit) metodu
+--------------------
+=>sort metodu listenin elemanlarını sıralamamızı sağlar. Hemen kullanımına bakalım.
+1)
+
+liste = [34,1,56,334,23,2,3,19]
+liste.sort()  //Küçükten büyüğe sıralar.//
+liste
+
+2)liste.sort(reverse = True) // Büyükten küçüğe sıralar.//
 
 
+3)liste = ["Elma","Armut","Muz","Kiraz"]
+liste.sort() //Alfabetic olarak küçükten büyüğe//
+liste
+
+4)liste = ["Elma","Armut","Muz","Kiraz"]
+liste.sort(reverse = True) //Alfabetic olarak büyükten küçüğe// 
+liste
+
+## İç içe Listeler
+=> Bir listenin içinde başka bir liste bulundurmak mümkündür. Bunlara Pythonda içiçe listeler denmektedir. Bu tip bir özellik, Pythonda ağaç yapılarında veya matris yapılarında oldukça kullanışlı olmaktadır.
 
 
+** 3 Tane liste oluşturalım.
+
+liste1 = [1,2,3]
+liste2 = [4,5,6]
+liste3 = [7,8,9]
+
+yeniliste = [liste1,liste2,liste3]
+yeniliste
+Şimdi, 2. listenin ilk elemanına nasıl ulaşacağımıza bakalım.
+
+** 1.elemanın 0.elemanı
+yeniliste[1][0]
+
+## Demetler (Tuplelar)
+-----------------------
+Demetler veya İngilizce ismiyle tuplelar listelere oldukça benzer ancak farkları demetlerin değiştirilemez oluşudur. Bu yüzden programlarımızda değiştirilmesini istemediğimiz değerleri bir demet içinde depolayabiliriz. İsterseniz konumuza demetlerin oluşturulmasıyla başlayalım.
+
+### Demet Oluşturma
+---------------------
+Demet elemanları parantez içine alınarak demet oluşturulabilir.
+demet = (1,2,3,4,5,6,7,8,9)
+demet
+konsol = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+ type() fonksiyonu yardımıyla türünü öğrenelim.
+ type(demet)
+ konsol = tuple
+
+not : demetlerde belli bir indekse ulaşma listelerle neredeyse aynıdır.
+
+## Demetlerin Temel Metodları
+------------------------------
+index metoduyla içine verdiğimiz elemanın hangi indekste olduğunu bulabiliriz.
+*Demeti oluşturalım.
+demet = (1,2,3,"Mustafa","Murat","Coşkun")
+* "Mustafa" elemanının indeksini buluyoruz.
+demet.index("Mustafa").
+konsol = 3 
+
+!!!! count metoduyla içine verdiğimiz değerin demette kaç defa geçtiğini bulabiliriz.
+örneğin;
+
+demet = (1,23,34,34,2,1,4,5,1,1,34)
+demet.count(1)
+konsol = 4
+demet.count(34)
+konsol = 3
+
+### Değiştirilmeme Özelliği
+-----------------------------
+Demetlerin değiştirilemez olduğunu artık biliyoruz
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Demetleri Ne Zaman Kullanalım ?
+-----------------------------------
+Aslında Python programcıları demetlerden ziyade listeleri daha çok kullanır. Ancak eğer programınızda değiştirilmesini istemediğiniz bilgiler varsa (Android uygulama sabitleri gibi) bunları demet içinde depolayabilirsiniz. Aynı zamanda, Read Only(Sadece Okuma) bir veritipi olduğu için listelere göre biraz daha hızlı çalışırlar.
 
 
 

@@ -293,6 +293,218 @@ Ekrana yazdırma işlemlerimiz sırasında print() fonksiyonunun faydalı özell
   
   "{:.2},{:.3},{:.4}".format(3.85687,7.98754,1.1212) //ondalıktan sonra :.x basamağa kadar x.indeks dahil değil//
    konsol = '3.9,7.99,1.121'
+   
+--------------------------------------------------------------------------------------------------------------------------------   ## Listeler :
+---------------------
+  Şimdi de yeni bir veritipimiz olan listeleri öğrenmeye çalışalım. Listeler yapıları gereği stringlere oldukça benzerler ve kullanıldıkları yerler de çok yararlı olan bir veritipidir. Tıpkı stringler gibi ,indekslenirler,parçalanırlar ve üzerinde değişik işlemler yapabildiğimiz metodlar bulunur. Ancak listelerin stringlerden önemli farkları da bulunmaktadır. Stringler konusundan bildiğimiz kadarıyla stringler değiştirilemez bir veri tipidir. Ancak, listelerimiz değiştirilebilir bir veritipidir.
+
+Bir listede her veritipinden elemanı saklayabiliriz. Bu anlamda sıralı bir diziye benzer. Peki bu konuda ne öğreneceğiz?
+
+       1.Liste oluşturma
+       2.Indeksleme ve Parçalama
+       3.Temel Liste Metodları ve İşlemleri
+       4.İç içe Listeler                                             
+   
+   ### 1) Liste Oluşturma :
+   ---------------------
+   Listeler bir [] köşeli parantez içine veriler veya değerler konarak oluşturulabilir.
+   
+   örnekler;
+   
+   1)liste değişkeni. Değişik veri tiplerinden değerleri saklayabiliyoruz.
+     liste =  [3,4,5,6,"Elma",3.14,5.324]
+     liste
+     konsol = [3, 4, 5, 6, 'Elma', 3.14, 5.324]   
+   
+   2) Boş liste
+      bos_liste = []
+      bos_liste
+      konsol = []
+   
+   3)len fonksiyonu listeler üzerinde de kullanılabilir.
+     liste3 = [3,4,5,6,6,7,8,9,0,0,0]
+     len(liste3)
+     konsol = 11
+   
+   !!önemli not!! : Bir string list() fonksiyonu yardımıyla listeye dönüştürülebilir.
+   örneğin;
+   
+   s =  "Merhaba"
+   lst =  list(s)
+   lst
+   konsol = ['M', 'e', 'r', 'h', 'a', 'b', 'a']
+   
+   
+  ## Listeleri Indeksleme ve Parçalama
+----------------------------------------
+ Listeleri indeksleme ve parçalama stringlerle birebir olarak aynıdır.
+ örneğin bir liste tanımlayıp ona değer verip sonrasında [x] şeklinde indeksliyip (stringlerdeki gibi sıfırdan başlar saymaya)
+ x değerine göre listeyi parçalayabiliriz.
+ 
+ örnekler:
+ ---------
+  1) liste = [3,4,5,6,7,8,9,10]
+     liste
+     konsol = [3, 4, 5, 6, 7, 8, 9, 10]
+   
+   2)5.eleman
+     liste[4]
+     konsol = 7
+   
+   3)Sonuncu Eleman
+     liste[len(liste)-1] // bunu liste[-1] şeklinde de bastırabiliriz. //
+     konsol = 10
+   
+   4)İlk Eleman
+     liste[-len(liste)]
+     konsol: 3
+   
+## Temel Liste Metodları ve İşlemleri   
+  Bu kısımda da listelerde yapabileceğimiz temel işlemleri ve bazı temel metodları öğreneceğiz. Listelerin daha bir çok metodunu kursun ileriki kısımlarında görüyor olacağız.
+
+Bir listeyi birbirine toplama işlemini stringlerdeki gibi yapabiliriz. 
+   
+   örneğin;
+   1)liste1 =  [1,2,3,4,5]
+     liste2 =  [6,7,8,9,10]
+     liste1 + liste2
+     konsol=  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+   
+   !Bir listeye bir tane eleman eklemek içinse aşağıdaki işlemi uygulayabiliriz.
+   
+   liste = [1,2,3,4]
+   liste =  liste + ["alperen"]
+   liste
+   konsol = [1, 2, 3, 4, 'alperen']
+   
+   not => Listeler direk olarak değiştirilebilirler.
+   örneğin;
+   liste[0] = 10
+   liste
+   [10, 2, 3, 4, 'alperen']
+   
+  ** Şöyle bir kullanım da mümkündür.
+   liste[:2] = [40,50] // 3.elemandan sonra 40,50 elamanı yok ve geri kalan elemanları yaz//
+   liste
+   konsol : [40, 50, 3, 4, 'alperen']
+   
+  ** Bir listeyi bir tamsayıyla da çarpabiliriz.
+
+   liste = [1,2,3,4,5]
+   liste * 3
+   konsol = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+   
+   
+  * Bir listeyi bir tamsayıyla da çarpabiliriz. //ama listemiz yine değişmez//
+   liste = [1,2,3,4,5]
+   liste * 3
+   konsol = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+   
+   !!!Şimdi de isterseniz temel bazı liste metodlarına bakalım. Listeler, diğer programlama dillerindeki arraylere göre oldukça esnektir. Belli bir boyutları yoktur ve ekleme, çıkarma yapmak oldukça kolaydır.
+   
+## append metodu
+----------------
+append metodu, verdiğimiz değeri listeye eklememizi sağlar
+örneğin;
+liste = [3,4,5,6]
+liste.append(7)
+liste
+
+konsol = [3, 4, 5, 6, 7]
+
+liste.append("alperen")
+liste
+konsol = [3, 4, 5, 6, 7, 'alperen']
+
+## pop metodu
+--------------
+Bu metod, içine değer vermezsek listenin son indeksindeki elemanı, değer verirsek verdiğimiz değere karşılık gelen      indeksteki elemanı listeden atar ve attığı elemanı ekrana basar.
+örneğin;
+liste = [1,2,3,4,5] 
+liste.pop() //eğer pop'un içine değer verilmemişse sondaki elemanı atar ve listeyi son haliyle bastırır.//
+konsol=1,2,3,4 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

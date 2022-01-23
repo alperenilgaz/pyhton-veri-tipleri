@@ -20,7 +20,7 @@ kalanı bulma (%) : Bu operatör de , bir sayının başka bir sayıya bölümü
 
 1)0. elemana  ulaşalım . Bunun için [] operatörünü kullanacağız.
 a="oğuz"
-a[0] **eğer 1 yazarsak ğ harfini 2 yazarsak u harfini 3 yazarasak z harfini bastırır.**
+a[0]                                //  **eğer 1 yazarsak ğ harfini 2 yazarsak u harfini 3 yazarasak z harfini bastırır.**
 konsol: o harfini bastırır.
 
 2 )Pythonda stringler baştan olduğu gibi sondan da indekslenebilirler. Sondan başlayarak -1,-2 ... şeklinde indekslenirler
@@ -33,7 +33,7 @@ konsol: o harfini bastırır.
 | [başlama indeksi : bitiş indeksi : atlama değeri]   |
 -------------------------------------------------------
 İsterseniz örneklerimize bakalım.
-     1.örnek :4.indeksten başla 10.indekse kadar(dahil değil) 
+     1.örnek :4.indeksten başla 10.indekse kadar(10 dahil değil) 
         a="tehlikeli oyunlar"
         a[4:10] -------->**bunun anlamı 4. indeksten 10.indekse kadar(10 dahil değil) yazdır ayrıca aradaki boşluğuda bir karakter 
                            olarak alır.**
@@ -84,7 +84,7 @@ konsol: o harfini bastırır.
        8.örnek :Baştan sona -1 atlayarak stringi al. (String'i ters çevirme)
         
        a="tehlikeli oyunlar"   
-       a[::-1] ----> ** kelimeyi tersten yazma kodu **
+       a[::-1] ---->     **kelimeyi tersten yazma kodu**
        konsol : 'ralnuyo ilekilhet'  yazısını gösterir.
        
  ## String Özellikleri
@@ -95,7 +95,7 @@ string="nazım hikmet"
 len (string) ----> **boşluğuda bir karakter sayar**
 konsol : 12 sayısını bize verir.
 
-Peki, Pythonda stringler toplanabiliyor mu ? Python'da bunu yapmak pythonda mümkündür.    
+Peki, Pythonda stringler toplanabiliyor mu ? Python'da bunu yapmak mümkündür.    
 1.örnek : 
 "python"*3
 konsol : bize 'pythonpythonpython' yazısını verir.
@@ -105,11 +105,11 @@ a="necip "
 b="fazil "
 c="kisakürek "
 a+b+c
-konsol : necip fazil kisakürek yazisini gösterir
+konsol : 'necip fazil kisakürek' yazisini gösterir
         
         
 3.örnek :         
-a="oğuz atay"
+a="oğuz atay "
 a+="tutunamayanlar"
 a
 konsol : oğuz atay tutunamayanlar yazisini gösterir.
@@ -119,12 +119,91 @@ konsol : oğuz atay tutunamayanlar yazisini gösterir.
 a="alp=
 a*3
 konsol :'alpalpalp' yazısını verir.
+-----------------------------------------------------------------------------------------------------------------------------------
+## Veri tipi dönüşümleri     
+------------------------
+### 1)Tamsayıyı Ondalıklı Sayıya Çevirme :
+------------------------------------
+=>Bir string'i bir tamsayıya çevirmek istediğimiz zaman int() fonksiyonunu kullanabiliriz. Ancak biraz dikkatli olmamızda fayda var. Dönüştürme işlemini yaparken stringin herbir karakterinin bir rakam olduğundan emin olmalıyız. Örneklere bakalım.
+
+ örnek  :  a="01235847"
+           b=int (a)
+           b
+           konsol : '01235847' cevabını verir.
         
+### 2)Stringleri Ondalıklı Sayıya Çevirme : 
+-----------------------------------------
+ => Bir string'i bir ondalıklı sayıya çevirmek istediğimiz zaman float() fonksiyonunu kullanabiliriz. Ancak biraz dikkatli olmamızda fayda var. Dönüştürme işlemini yaparken stringin ondalıklı sayı formatına uygun olduğundan emin olmalıyız. Örneklere bakalım.
+  
+  örnek :  a="1.235847"
+           b=float(a)
+           b
+           konsol : '1.235847' cevabını verir.
         
+ ### 3) Sayıları Stringlere Çevirme       
+------------------------------------
+ => Bir sayıyı string'e çevirmek için str() fonksiyonunu kullanabiliriz.Sayıyı oluşturan tüm rakamlar veya noktalar birer karaktere dönüşecek. Örneklerimize bakacak olursak ;
+ 
+ 1.örnek:
+ a="32324324"
+ b=str(a)
+ len(b)
+ konsol : '8' cevabının gösterir
         
-        
-        
-        
-        
-        
-       
+ 2.örnek :
+ a=str(3.14) // noktayı da dahil ederek sayar//
+ len (a)
+ konsol : '4'cevabını verir.
+-----------------------------------------------------------------------------------------------------------------------------------
+## Print fonksiyonu ve formatlama :(bu kısım çoooooook önemli)
+--------------------------------
+Bu bölümde ekrana veri tiplerini yazdırmak için kullandığımız print() fonksiyonunu ve formatlama yöntemlerini öğreneceğiz.
+ 
+### 1) Print() Fonksiyonu :
+----------------------------
+Kodlarımızı dosyalara yazdığımızda, eğer ekrana bir değer bastırmak istersek print fonksiyonunu kullanırız. Kullanımı oldukça basittir ve değişik özelliklere sahiptir. Örneklerimize bakalım.
+
+örnek 1 : 
+a=4
+b=5
+print(a+b)
+konsol = 9 cevabını bize verir.
+
+Buradaki işlemde rdüğümüz gibi biz print fonksiyonunun içine bastırmak istediğimiz değeri veriyoruz ve bu fonksiyon da ekrana değerimizi bastırıyor. Peki aynı satırda birkaç değer bastırmak istersek ne yapıyoruz? Bunun için değerlerimizin arasına , karakterini atıyoruz. Örnek yapacak olursak
+
+1.örnek :
+print(3.14+2)
+konsol = 5.14 cevabını veirir.
+
+2.örnek :
+print("alperen ılgaz")
+konsol bize alperen ılgaz yazısını aynen gösterir.
+
+ Peki aynı satırda birkaç değer bastırmak istersek ne yapıyoruz? Bunun için değerlerimizin arasına , karakterini atıyoruz.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

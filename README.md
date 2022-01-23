@@ -189,26 +189,110 @@ Peki aynı satırda birkaç değer bastırmak istersek ne yapıyoruz? Bunun içi
  2)print("necip","fazil","kısakürek")         
    konsol= necip fazil kısakürek yazısını gösterir. 
 
+## Stringlerdeki Özel Karakterler
+----------------------------------------
+Pythonda stringlerde kullanılan özel karakterler mevcuttur ve kullanıldıkları yerler de işlerimizi kolaylaştırır. En çok kullanılan 2 tanesi şunlardır;
+
+ ### 1) \n karakteri
+--------------------
+Eğer print() fonksiyonu stringlerde böyle bir karakterle karşılaşırsa alt satırdan ekrana yazdırma işlemine devam eder. Hemen örneklerimize bakalım.
+örnekler
+
+1)print("alperen\nılgaz\nsoftware")
+  konsol = 
+  alperen
+  ılgaz
+  software
+yazısını bize gösterir.
+
+ ### 2) \t karakteri
+--------------------
+Eğer print() fonksiyonu stringlerde böyle bir karakterle karşılaşırsa bir tab boşluk bırakarak ekrana yazdırma işlemine devam eder. Hemen örneklerimize bakalım.
+örnekler : 
+
+1) print("Ocak\tMart\tŞubat")
+   konsol: ocak   mart   şubat
+   
+## type() fonksiyonu
+--------------------
+print() fonksiyonundan bahsetmişken type() fonksiyonunu öğrenmekte fayda var. type() fonksiyonu içine gönderilen değerin hangi veri tipinden olduğunu söyler.
+
+1) Integer (Tamsayı) türü
+a=65
+print(type(a))
+konsol = <class 'int'> yazısını verir.
+ 
+2)Float (Ondalıklı Sayı) türü
+  a=5.87
+  konsol = <class 'float'>  yazısını verir.
+
+3)String (Karakter Dizisi) türü 
+  a = "Murat"
+  print(type(a)) 
+   konsol =  <class 'str'> yazısını verir.
+   
+## Print() Fonksiyonunun Özellikleri
+---------------------------------------
+Ekrana yazdırma işlemlerimiz sırasında print() fonksiyonunun faydalı özelliklerini kullanırsak yazdığımız kodu daha verimli kılabiliriz. Bunun için burada 2 tane özellikten bahsedeceğiz.
+
+### 1) sep parametresi
+------------------------
+=> print() fonksiyonunda kullanılabilen sep parametresi yazdırdığımız değerlerin arasına istediğimiz karakterlerin yerleştirilmesini sağlar. Eğer bu parametreyi kullanmazsak değerlerin arasına varsayılan olarak boşluk yerleştirildiğini biliyoruz.Örneklere bakalım.
+
+örnekler
+
+1)print(3,4,5,6,7,8,9)
+  konsol = 3 4 5 6 7 8 9
+
+2)sep parametresi sayesinde değerlerin arasına nokta konuyor.
+  print(3,4,5,6,7,8,9,sep = ".")
+   konsol = 3.4.5.6.7.8.9
+ 
+3)Değerlerin arasında "/" sembolü yerleştiriliyor.
+  print("06","04","2015",sep = "/")
+     konsol = 06/04/2015
+
+### 2) Yıldızlı Parametreler
+----------------------------
+=>Eğer bir stringin başına * işareti koyup, print fonksiyonuna gönderirsek bu string karakterlerine ayrılacak ve her bir karakter ayrı birer string olarak davranılarak ekrana basılacaktır.
+örnekler
+1) Varsayılan olarak karakterlerin arasına boşluk konuluyor.
+   print(*"Python")
+   konsol = P y t h o n
+
+2)print(*"Python",sep = "\n")
+     konsol =P
+             y
+             t
+             h
+             o
+             n 
 
 
+## Formatlama
+-------------
+=>Programlama yaparken bazı yerlerde bir stringin içinde daha önceden tanımlı string,float, int vs. değerleri yerleştirmek isteyebiliriz. Böyle durumlar için Pythonda format() fonksiyonu bulunmaktadır. Örneğin, programımızda 3 tane tamsayı değerimiz var ve biz bunları bir string içinde ekrana basmak istiyoruz. Bunun için format() fonksiyonunu kullanabiliriz. format() fonksiyonunun çok fazla özelliği olduğu için, ben burada sadece en çok kullandığımız özelliğini göstereceğim.
 
+örnekler :
 
+1)Burada 3 tane süslü parantezimiz ({}) var ve bunların yerine sırasıyla format fonksiyonun içindeki değerler geçiyor.
+  "{} {} {}".format(3.1423,5.324,7.324324)
+       konsol = '3.1423 5.324 7.324324' 
 
+2)a = 3
+  b = 4
+  print("{} + {} 'nin toplamı {} 'dır".format(a,b,a+b))
+  konsol =  3 + 4 'nin toplamı 7 'dır
 
+3) Süslü parantezlerin içindeki sayılar format fonksiyonun içinden hangi sıradaki değerin geleceğini söylüyor.
 
+   "{1} {0} {2} ".format(20,"alperen","yaşında")
+     konsol = 'alperen 20 yaşında '
 
-
-
-
-
-
-
-
-
-
-
-
-
+4)üslü parantezlerin içindeki kullanım ondalıklı kısmın sadece 2 basamağına kadar almak istediğimiz söylüyor.
+  
+  "{:.2},{:.3},{:.4}".format(3.85687,7.98754,1.1212) //ondalıktan sonra :.x basamağa kadar x.indeks dahil değil//
+   konsol = '3.9,7.99,1.121'
 
 
 

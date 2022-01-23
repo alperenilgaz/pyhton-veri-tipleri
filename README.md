@@ -169,7 +169,7 @@ b=5
 print(a+b)
 konsol = 9 cevabını bize verir.
 
-Buradaki işlemde rdüğümüz gibi biz print fonksiyonunun içine bastırmak istediğimiz değeri veriyoruz ve bu fonksiyon da ekrana değerimizi bastırıyor. Peki aynı satırda birkaç değer bastırmak istersek ne yapıyoruz? Bunun için değerlerimizin arasına , karakterini atıyoruz. Örnek yapacak olursak
+Buradaki işlemde  gördüğümüz gibi biz print fonksiyonunun içine bastırmak istediğimiz değeri veriyoruz ve bu fonksiyon da ekrana değerimizi bastırıyor. Peki aynı satırda birkaç değer bastırmak istersek ne yapıyoruz? Bunun için değerlerimizin arasına , karakterini atıyoruz. Örnek yapacak olursak
 
 1.örnek :
 print(3.14+2)
@@ -184,7 +184,7 @@ Peki aynı satırda birkaç değer bastırmak istersek ne yapıyoruz? Bunun içi
 örnekler :
 ----------
 1)print("alperen",5,12,39)
-  konsol  bize alperen 5 12 39 yazısını gösterir(eğere hepsi tırnak içinde olsaydı alperen ,5,12,39 şeklinde bastırırdı.)
+  konsol  bize ' alperen 5 12 39 'yazısını gösterir(eğere hepsi tırnak içinde olsaydı alperen ,5,12,39 şeklinde bastırırdı.)
   
  2)print("necip","fazil","kısakürek")         
    konsol= necip fazil kısakürek yazısını gösterir. 
@@ -227,7 +227,7 @@ konsol = <class 'int'> yazısını verir.
   konsol = <class 'float'>  yazısını verir.
 
 3)String (Karakter Dizisi) türü 
-  a = "Murat"
+  a = "alperen"
   print(type(a)) 
    konsol =  <class 'str'> yazısını verir.
    

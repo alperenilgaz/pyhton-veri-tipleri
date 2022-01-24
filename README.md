@@ -1,4 +1,4 @@
-# pyhton-veri-tipleri
+# Temel_python_objeleri ve veri yapıları
 ##matematik operatörleri : 
 --------------------------
 tamsayı bölmesi (//): Bu operatör, bir sayının başka bir sayıya bölümünden ortaya çıkan bölüm sonucunu vermektedir.

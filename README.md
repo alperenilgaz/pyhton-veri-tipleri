@@ -505,16 +505,24 @@ Demetlerin değiştirilemez olduğunu artık biliyoruz
 -----------------------------------
 Aslında Python programcıları demetlerden ziyade listeleri daha çok kullanır. Ancak eğer programınızda değiştirilmesini istemediğiniz bilgiler varsa (Android uygulama sabitleri gibi) bunları demet içinde depolayabilirsiniz. Aynı zamanda, Read Only(Sadece Okuma) bir veritipi olduğu için listelere göre biraz daha hızlı çalışırlar.
 
+## Sözlükler :
+-----------------
+Sözlükler veya İngilizce ismiyle dictionaryler aynı gerçek hayattaki sözlükler gibi davranan bir veritipidir. Bu veritipi, şimdiye kadar gördüğümüz tüm veritiplerinden yapısı gereği farklıdır. Sözlüğün içindeki her bir eleman indeks ile değil, anahtar (key), değer (value) olarak tutulur. Bu anlamda gerçek hayattaki sözlüklere oldukça benzerler. Örneğin, elimize bir ingilizce-Türkçe sözlük alıp freedom kelimesini(key ya da anahtar) aradığımız zaman karşılık değer özgürlük (değer ya da value) olarak karşımıza çıkar. Sözlükleri de bu şekilde düşünebiliriz.
 
+Şimdi isterseniz bir sözlük oluşturarak konumuza başlayalım.
 
+### Sözlük Oluşturmak
+------------------------
+Süslü Parantez ve iki nokta (:) ile anahtar değerlerimizi yerleştirelim.
+sözlük1 = {"sıfır":0,"bir":1,"iki":2,"üç":3}
+sözlük1
+konsol = {'bir': 1, 'iki': 2, 'sıfır': 0, 'üç': 3}
 
-
-
-
-
-
-
-
+ !! Bir sözlüğe dinamik olarak da eleman ekleyebiliriz.
+ !! Tıpkı listeler gibi, iç içe sözlükler de oluşturulabilir. 
+ !! values() metodu sözlüğün değerlerini(value) bir liste olarak döner.
+ !! keys() metodu sözlüğün anahtarlarını(key) bir liste olarak döner.
+ !! items() metodu sözlüğün anahtar ve değerlerini bir liste içinde demet olarak döner.
 
 
 

@@ -20,7 +20,7 @@ kalanı bulma (%) : Bu operatör de , bir sayının başka bir sayıya bölümü
 
 1)0. elemana  ulaşalım . Bunun için [] operatörünü kullanacağız.
 a="oğuz"
-a[0]                                //  **eğer 1 yazarsak ğ harfini 2 yazarsak u harfini 3 yazarasak z harfini bastırır.**
+a[0]  //  **eğer 1 yazarsak ğ harfini 2 yazarsak u harfini 3 yazarasak z harfini bastırır.**
 konsol: o harfini bastırır.
 
 2 )Pythonda stringler baştan olduğu gibi sondan da indekslenebilirler. Sondan başlayarak -1,-2 ... şeklinde indekslenirler
